@@ -1,0 +1,111 @@
+.add {
+  flex: 1;
+  padding: 40px 60px;
+  margin-left: 240px; /* sidebar width */
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.add-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1f2933;
+}
+
+.add-form {
+  max-width: 700px;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 15px;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #ff4c24;
+}
+
+/* Image Upload */
+.add-img-upload {
+  width: fit-content;
+}
+
+.add-img-upload img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px dashed #c7c7c7;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Row layout */
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* Button */
+.add-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #ff4c24;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #e8431f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add {
+    margin-left: 70px;
+    padding: 25px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}

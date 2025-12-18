@@ -1,0 +1,102 @@
+.place-order {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 100px 8vw;
+  background-color: #f9f9f9;
+}
+
+/* LEFT SIDE – DELIVERY FORM */
+.place-holder-left {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.place-holder-left .title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.place-holder-left input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+}
+
+.place-holder-left input:focus {
+  border-color: tomato;
+}
+
+/* TWO INPUTS IN A ROW */
+.multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+/* RIGHT SIDE – CART TOTAL */
+.place-holder-right {
+  width: 35%;
+}
+
+.cart-total {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.cart-total h2 {
+  margin-bottom: 20px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #555;
+}
+
+.cart-total-details.total {
+  font-weight: 600;
+  font-size: 17px;
+  color: black;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: tomato;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.checkout-btn:hover {
+  background-color: #e54b2b;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media (max-width: 900px) {
+  .place-order {
+    flex-direction: column;
+    padding: 80px 5vw;
+  }
+
+  .place-holder-right {
+    width: 100%;
+  }
+
+  .multi-fields {
+    flex-direction: column;
+  }
+}
