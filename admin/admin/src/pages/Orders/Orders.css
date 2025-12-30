@@ -1,0 +1,90 @@
+.orders {
+  padding: 20px 30px;
+  background-color: #f6f7f9;
+  min-height: 100vh;
+}
+
+.orders h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Order card */
+.order-box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.order-box:hover {
+  transform: translateY(-2px);
+}
+
+/* Text styles */
+.order-box p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.order-box b {
+  color: #222;
+}
+
+/* Payment status */
+.order-box .paid {
+  color: green;
+  font-weight: 600;
+}
+
+.order-box .pending {
+  color: red;
+  font-weight: 600;
+}
+
+/* Items list */
+.order-items {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 3px solid #eee;
+}
+
+/* Divider */
+.order-box hr {
+  margin-top: 12px;
+  border: none;
+  border-top: 1px solid #eee;
+}
+
+.remove-btn {
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c1121f;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders {
+    padding: 15px;
+  }
+
+  .order-box {
+    padding: 14px;
+  }
+}

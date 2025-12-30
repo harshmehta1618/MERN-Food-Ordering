@@ -16,10 +16,22 @@ const verifyOrder = async (req, res) => {
   res.json({ success: true });
 };
 
+// ADMIN: get all orders
+const listOrders = async (req, res) => {
+  try {
+    const orders = await orderModel.find({}).sort({ date: -1 });
+    res.json({ success: true, data: orders });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error fetching orders" });
+  }
+};
+
+
 
 // placing user order
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "http://localhost:5174";
 
   try {
     // ✅ userId comes from auth middleware
@@ -51,4 +63,23 @@ const placeOrder = async (req, res) => {
   }
 };
 
-export { placeOrder, verifyOrder };
+const updateOrderStatus = async (req, res) => {
+  await orderModel.findByIdAndUpdate(req.body.orderId, {
+    status: req.body.status,
+  });
+  res.json({ success: true });
+};
+
+// ADMIN: delete order
+const deleteOrder = async (req, res) => {
+  try {
+    await orderModel.findByIdAndDelete(req.body.orderId);
+    res.json({ success: true, message: "Order removed" });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error deleting order" });
+  }
+};
+
+
+export { placeOrder, verifyOrder, listOrders, updateOrderStatus, deleteOrder};
